@@ -1,0 +1,34 @@
+﻿<Window x:Class="MagicSquares.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagicSquares"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="700" MinHeight="450" MinWidth="700">
+    <Grid Margin="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+            <TextBlock Text="Дані" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
+            <TextBox x:Name="text_box" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="15"/>
+            <Button x:Name="encrypt_button" Content="Зашифрувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Margin="15"/>
+            <Button x:Name="decrypt_button" Content="Дешифрувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Margin="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBox x:Name="matrix_n" Text="n" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Width="30" FontFamily="Times New Roman" Margin="30"/>
+            <TextBlock x:Name="matrix_text" Text="1  2  3" FontSize="26" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Height="175"/>
+            <Button x:Name="generate_button" Content="Згенерувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Width="200" Margin="15"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="274,83,0,0">
+            <TextBlock Text="Результат" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
+            <TextBox x:Name="result_text" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="15"/>
+        </StackPanel>
+    </Grid>
+</Window>
