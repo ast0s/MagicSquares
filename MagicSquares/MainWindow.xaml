@@ -16,14 +16,14 @@
         <StackPanel Grid.Column="0" VerticalAlignment="Center">
             <TextBlock Text="Дані" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
             <TextBox x:Name="text_box" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="15"/>
-            <Button x:Name="encrypt_button" Content="Зашифрувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Margin="15"/>
-            <Button x:Name="decrypt_button" Content="Дешифрувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Margin="15"/>
+            <Button x:Name="encrypt_button" Content="Зашифрувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Margin="15" Click="encrypt_button_Click"/>
+            <Button x:Name="decrypt_button" Content="Дешифрувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Margin="15" Click="decrypt_button_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <TextBox x:Name="matrix_n" Text="n" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Width="30" FontFamily="Times New Roman" Margin="30"/>
             <TextBlock x:Name="matrix_text" Text="1  2  3" FontSize="26" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Height="175"/>
-            <Button x:Name="generate_button" Content="Згенерувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Width="200" Margin="15"/>
+            <Button x:Name="generate_button" Content="Згенерувати" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Width="200" Margin="15" Click="generate_button_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="274,83,0,0">
