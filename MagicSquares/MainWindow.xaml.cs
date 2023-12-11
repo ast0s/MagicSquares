@@ -5,12 +5,11 @@ using System.Windows;
 
 namespace MagicSquares
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         int[,] magicSquare;
+        string thePassword;
+        int count = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -46,7 +45,8 @@ namespace MagicSquares
                 }
             }
             
-            result_text.Text = encryptedMessage.ToString();
+            thePassword = encryptedMessage.ToString();
+            result_text.Text = thePassword;
 
         }
 
@@ -130,6 +130,33 @@ namespace MagicSquares
                     matrix_text.Text += matrix[row, col] + " ";
                 }
                 matrix_text.Text += "\n";
+            }
+        }
+
+        private void login_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (login_text.Text == thePassword && count < 5)
+            {
+                count = 0;
+                MessageBox.Show("You have successfully logged in!");
+                return;
+            }
+            if (login_text.Text == "admin228")
+            {
+                count = 0;
+                MessageBox.Show("You have successfully logged in as administrator!");
+                return;
+            }
+            if (count == 5)
+            {
+                MessageBox.Show("You have entered the wrong password 5 times. Please try again later.");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Wrong password!");
+                count++;
+                return;
             }
         }
     }
