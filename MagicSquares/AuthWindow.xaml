@@ -1,0 +1,17 @@
+﻿<Window x:Class="MagicSquares.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagicSquares"
+        mc:Ignorable="d"
+        Title="AuthWindow" x:Name="authWindow" Height="450" Width="500">
+    <Grid>
+
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Логін" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
+            <TextBox x:Name="login_text" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="15" Width="250"/>
+            <Button x:Name="login_button" Content="Увійти" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Width="200" Margin="15" Click="login_button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

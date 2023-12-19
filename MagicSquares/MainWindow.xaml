@@ -11,7 +11,6 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" VerticalAlignment="Center">
@@ -30,12 +29,6 @@
         <StackPanel Grid.Column="2" VerticalAlignment="Center">
             <TextBlock Text="Результат" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
             <TextBox x:Name="result_text" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="15"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="3" VerticalAlignment="Center">
-            <TextBlock Text="Логін" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
-            <TextBox x:Name="login_text" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="15"/>
-            <Button x:Name="login_button" Content="Увійти" FontSize="20" VerticalAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" Height="35" Width="200" Margin="15" Click="login_button_Click"/>
         </StackPanel>
     </Grid>
 </Window>
